@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="example.ivanyu.ivanyuassignment4stylefadingshapesapp.MainActivity">
+    <!-- This TextView will display the counts of the circles and rectangles-->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:id="@+id/text" />
+    <!--This button is for generating rectangles-->
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="RECT"
+        android:id="@+id/rect"
+        />
+    <!--This button is for generating circles-->
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="CIRCLE"
+        android:id="@+id/circle"
+        android:layout_alignTop="@+id/rect"
+        android:layout_toEndOf="@+id/rect" />
+
+    <!--This button is for erasing all shapes from the screen-->
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="CLEAR"
+        android:id="@+id/clear"
+        />
+    <!--This relative layout is where the shapes will be displayed-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text"
+        android:layout_above="@+id/rect"
+        android:id="@+id/canvas"
+        android:layout_alignParentStart="true"
+        ></RelativeLayout>
+    <!-- This button is for setting the styles of the shape-->
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="STYLE"
+        android:id="@+id/style"
+        android:layout_below="@+id/canvas"
+        android:layout_toEndOf="@+id/circle" />
+</RelativeLayout>
